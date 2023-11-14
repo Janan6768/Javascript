@@ -49,4 +49,17 @@ const regularUser = {
         lName: 'Khan'
     }
 }
-console.log(regularUser.fulname.lNamegit);
+//console.log(regularUser.fulname.lNamegit);
+
+const car = {
+    make : 'Toyota',
+    model : 'camrey',
+    start : function(){
+        console.log('Engine Started...');
+    },
+    stop(){
+        console.log('Engine Stoped...');
+    },
+};
+car.start();
+car.stop();
