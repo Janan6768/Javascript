@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Center Divs Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      margin: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .banner {
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    #clock {
+      font-size: 24px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      background-color:yellow;
+      color:  red;
+    }
+  </style>
+</head>
+<body style="background-color: black;">
+  <div class="center">
+    <div class="banner"><span>Your Local Time</span></div>
+    <div id="clock"></div>
+  </div>
+</body>
+<script>
+    const clock = document.getElementById('clock')
+    
+    setInterval(function () {
+        let date = new Date();
+        clock.innerHTML = date.toLocaleTimeString();    
+    },1000)
+</script>
+</html>
