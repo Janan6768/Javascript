@@ -9,13 +9,14 @@ label{
     font-weight: bold;
     color: red;
 }
-#GuessField{
-    height: 30px;
-}
+
 #subt{
     border-radius: 4px;
     height: 35px;
     color: green;
     background-color: white;
     font-weight: bold;
+}
+#newGame{
+    cursor: pointer;
 }
