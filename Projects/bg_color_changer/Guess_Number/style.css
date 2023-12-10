@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+label{
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+#GuessField{
+    height: 30px;
+}
+#subt{
+    border-radius: 4px;
+    height: 35px;
+    color: green;
+    background-color: white;
+    font-weight: bold;
+}
