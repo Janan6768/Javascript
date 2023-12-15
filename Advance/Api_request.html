@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api-Request</title>
+</head>
+<body>
+0	UNSENT	Client has been created. open() not called yet.</br>
+1	OPENED	open() has been called.</br>
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.</br>
+3	LOADING	Downloading; responseText holds partial data.</br>
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/Janan6768';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // if you used arrow fumction used e.g --> xhr.responseText
+            //and if you used simple function  --> function(){} used e.g --> this.responseText
+            const data = JSON.parse(xhr.responseText)
+            console.log(data.login);
+        }
+    }    
+    xhr.send()
+</script>
+</html>
