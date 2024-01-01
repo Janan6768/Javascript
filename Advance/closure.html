@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+</body>
+<script>
+    //lexical scoping
+function outer(){
+    let username = "Janan"
+    function inner(){
+        let secret = "abc123"
+        console.log("Inner",username);
+        // console.log(secretTwo);
+    }
+    function innerTwo(){
+        let secretTwo = "def456"
+        console.log("InnerTwo",username);
+        // console.log(secret);
+    }
+    inner();
+    innerTwo();
+}
+outer();
+
+</script>
+
+<script>
+
+// document.getElementById('green').onclick = function(){
+//     document.body.style.backgroundColor = "green";
+// }
+// document.getElementById('blue').onclick = function(){
+//     document.body.style.backgroundColor = "blue";
+// }
+
+//closure
+function clickHandler(color){
+    return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+}
+document.getElementById('green').onclick = clickHandler('green');
+document.getElementById('blue').onclick = clickHandler('blue');
+</script>
+</html>

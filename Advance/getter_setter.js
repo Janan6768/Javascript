@@ -22,4 +22,4 @@ class User {
     }
 }
 const data = new User("Janan@jk.com", "0900")
-console.log(data._email); 
+console.log(data);
